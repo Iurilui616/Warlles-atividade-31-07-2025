@@ -2,7 +2,7 @@
 
 int main() {
     int opcao;
-    float a, b;
+    float a, g;
 
     printf("Menu de Operacoes:\n");
     printf("1 - Soma\n");
@@ -18,27 +18,27 @@ int main() {
     if (opcao == 4) {
         do {
             printf("Digite o segundo valor (nao pode ser 0): ");
-            scanf("%f", &b);
-            if (b == 0)
+            scanf("%f", &g);
+            if (g == 0)
                 printf("Valor invalido! Tente novamente.\n");
-        } while (b == 0);
+        } while (g == 0);
     } else {
         printf("Digite o segundo valor: ");
-        scanf("%f", &b);
+        scanf("%f", &g);
     }
 
     switch (opcao) {
         case 1:
-            printf("Resultado: %.2f\n", a + b);
+            printf("Resultado: %.2f\n", a + g);
             break;
         case 2:
-            printf("Resultado: %.2f\n", a - b);
+            printf("Resultado: %.2f\n", a - g);
             break;
         case 3:
-            printf("Resultado: %.2f\n", a * b);
+            printf("Resultado: %.2f\n", a * g);
             break;
         case 4:
-            printf("Resultado: %.2f\n", a / b);
+            printf("Resultado: %.2f\n", a / g);
             break;
         default:
             printf("Opcao invalida!\n");
