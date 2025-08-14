@@ -14,8 +14,18 @@ int main() {
 
     printf("Digite o primeiro valor: ");
     scanf("%f", &a);
-    printf("Digite o segundo valor: ");
-    scanf("%f", &b);
+
+    if (opcao == 4) {
+        do {
+            printf("Digite o segundo valor (nao pode ser 0): ");
+            scanf("%f", &b);
+            if (b == 0)
+                printf("Valor invalido! Tente novamente.\n");
+        } while (b == 0);
+    } else {
+        printf("Digite o segundo valor: ");
+        scanf("%f", &b);
+    }
 
     switch (opcao) {
         case 1:
@@ -28,10 +38,7 @@ int main() {
             printf("Resultado: %.2f\n", a * b);
             break;
         case 4:
-            if (b != 0)
-                printf("Resultado: %.2f\n", a / b);
-            else
-                printf("Erro: divisao por zero!\n");
+            printf("Resultado: %.2f\n", a / b);
             break;
         default:
             printf("Opcao invalida!\n");
